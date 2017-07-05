@@ -31,7 +31,7 @@
     slider('introducao', 3000);
 })();
 
-$('.owl-carousel').owlCarousel({
+$('#lancamentos').owlCarousel({
     loop:true,
     margin:60,
     dots: true,
@@ -47,6 +47,42 @@ $('.owl-carousel').owlCarousel({
         }
     }
 })
+
+$('#mais-vendidos, #mais-vendidos-2').owlCarousel({
+    loop:true,
+    margin: 15,
+    dots: true,
+    responsive:{
+        0:{
+            items:3
+        },
+        600:{
+            items:4
+        },
+        1000:{
+            items:4
+        }
+    }
+})
+
+$('#nacionais, #classicos, #pop-rock').owlCarousel({
+    loop:true,
+    margin: 15,
+    dots: true,
+    responsive:{
+        0:{
+            items:3
+        },
+        600:{
+            items:4
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+
+
 
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel();

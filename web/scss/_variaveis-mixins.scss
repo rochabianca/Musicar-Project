@@ -38,7 +38,7 @@ $fonte: 'Lato', sans-serif;
   font-family: $fonte;
   @if $size == 14 {
     font-size: em(14);
-    line-height: em(24,14);
+    line-height: em(20,14);
   }
   @else if $size == 18 {
     font-size: em(18);

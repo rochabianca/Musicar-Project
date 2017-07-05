@@ -3,6 +3,8 @@
 @import '_variaveis-mixins';
 @import '_menu';
 
+//Estilos Gerais
+
 a {
   text-decoration: none;
 }
@@ -11,9 +13,68 @@ img {
   max-width: 100%;
 }
 
-hr.linha-roxo-escura {
+.espaco {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.titulo {
+  color: $roxo-escuro;
+  @include tipo-1(36);
+  text-align: center;
+  margin-bottom: 30px;
+
+  &::after {
+    content: '';
+    display: block;
+    background: $roxo-escuro;
+    width: 60px;
+    height: 4px;
+    margin: 10px auto;
+  }
+}
+
+.subtitulo {
+  color: $roxo-escuro;
+  @include tipo-1(36);
+  text-align: left;
+  margin-bottom: 30px;
+
+  &::after {
+    content: '';
+    display: block;
+    background: $roxo-escuro;
+    width: 60px;
+    height: 4px;
+    margin: 10px 0px;
+  }
+}
+
+.menor {
+  color: $branco;
+  margin-bottom: 15px;
+  @include tipo-1(24);
+  text-transform: none;
+  &::after {
+    background: $branco;
+  } 
+}
+
+.chamada {
+  margin-top: 20px;
+  p {
+    color: $roxo-escuro;
+    text-align: center;
+    @include tipo-2(18);
+    margin-bottom: 15px;
+  }
+}
+
+//Linhas Divisórias
+
+hr.linha {
   padding: 0px;
-  background: $roxo-escuro;
+  
   display: block;
   height: 8px;
   margin: 0px;
@@ -21,7 +82,16 @@ hr.linha-roxo-escura {
   width: 100%;
 }
 
+.roxo-escura {
+  background: $roxo-escuro;
+}
+
+.preta {
+  background: $preto;
+}
+
 //Introdução
+
 .introducao {
 	background: $preto;
 }
@@ -49,29 +119,8 @@ hr.linha-roxo-escura {
 	opacity: 1;
 }
 
-.espaco {
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
-
-.titulo {
-  color: $roxo-escuro;
-  @include tipo-1(36);
-  text-align: center;
-  margin-bottom: 30px;
-
-  &::after {
-    content: '';
-    display: block;
-    background: $roxo-escuro;
-    width: 60px;
-    height: 4px;
-    margin: 10px auto;
-  }
-}
-
 .lancamento-item {
-  border: 4px solid $roxo-escuro;
+  box-shadow: 3px 3px 3px #adadad;
 }
 
 .lancamento-item img {
@@ -86,6 +135,14 @@ hr.linha-roxo-escura {
   text-transform: none;
 }
 
+.albuns {
+  margin-top: 15px;
+  text-align: left;
+  color: $roxo-medio;
+  @include tipo-1(18);
+  text-transform: none;
+}
+
 .artista {
   text-align: center;
   color: $roxo-medio;
@@ -93,19 +150,18 @@ hr.linha-roxo-escura {
   text-transform: none;
 }
 
+.artistas {
+  text-align: left;
+  color: $roxo-escuro;
+   @include tipo-1(18);
+  text-transform: none;
+}
+
 .owl-theme .owl-dots, .owl-theme .owl-nav {
   text-align: right;
 }
 
-.chamada-lancamentos {
-  margin-top: 20px;
-  p {
-    color: $roxo-escuro;
-    text-align: center;
-    @include tipo-2(18);
-    margin-bottom: 15px;
-  }
-}
+//Botões
 
 .btn {
   text-align: center;
@@ -128,9 +184,65 @@ hr.linha-roxo-escura {
   }
 }
 
-.banner-kard {
+.btn-roxo-escuro {
+  background: $roxo-escuro;
+  &:hover {
+    background: #864DD9;
+  }
+}
+
+//Banners
+
+.banner {
   width: 100%;
   height: 450px;
+}
+
+.kard {
   background: url("../img/banner-kard.jpg") no-repeat;
   background-size: cover;
+}
+
+.hugh-laurie {
+  background: url("../img/hugh-laurie.jpg") no-repeat;
+  background-size: cover;
+}
+
+.banner-final {
+  background: url("../img/banner-final.jpg") no-repeat;
+  background-size: cover;
+  height: 300px;
+  
+  h1 {
+    padding-top: 30px;
+    text-transform: none;
+  }
+}
+
+//Footer
+
+.footer {
+  background: $roxo-escuro;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  p {
+    @include tipo-2(14);
+    color: $branco;
+  }
+}
+
+.redes {
+  display: inline-block;
+  border: 3px solid $branco;
+  margin-left: 5px;
+  img {
+    padding: 5px;
+  }
+}
+
+.sub-footer {
+  background: $roxo;
+  padding: 20px;
+  color: $roxo-escuro;
+  text-align: center;
 }

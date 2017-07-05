@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Music Store</title>
+
+  <!--SEO-->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="MusicShop"/>
+  <meta property="og:description" content="Sua música a qualquer hora, em qualquer lugar"/>
+  <meta property="og:url" content="musicshop.com.br"/>
+  <meta property="og:image" content="img/logo.png"/>
+
+  <link rel="shortcut icon" href="favicon.ico">
 
   <!--Imports-->
   <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -13,11 +22,14 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
   <header class="header">
     <div class="container header-container">
       <div class="logo">
-        <img src="img/music-store.png" alt="Logo Music Store">
+        <a href="#">
+          <img src="img/music-store.png" alt="Logo Music Store">
+        </a>
       </div>
 
       <div class="menu">
@@ -35,7 +47,8 @@
       </div>
     </div>
   </header>
-  <hr class="linha-roxo-escura">
+
+  <hr class="linha roxo-escura">
 
   <section class="introducao slide">
 		<div>
@@ -48,76 +61,560 @@
 			<img src="img/hugh-laurie-carrousel.jpg" alt="Hugh Laurie já disponível na loja">
 		</div>
 	</section>
-  <hr class="linha-roxo-escura">
+
+  <hr class="linha roxo-escura">
 
   <section class="espaco lancamentos">
     <div class="container">
       <h1 class="titulo">Lançamentos</h1>
 
-      <div class="owl-carousel owl-theme">
+      <div class="owl-carousel owl-theme" id="lancamentos">
+
         <div class="item" >
-          <img class="lancamento-item"  src="img/albuns/muse.jpg" alt="">
-          <h3 class="album">The Resistance</h3>
-          <h4 class="artista">Muse</h4>
-        </div>
-        <div class="item" >
-          <img class="lancamento-item"  src="img/albuns/rise-against.jpg" alt="">
-          <h3 class="album">The Black Market</h3>
-          <h4 class="artista">Rise Against</h4>
-        </div>
-        <div class="item" >
-          <img class="lancamento-item"  src="img/albuns/gamma-ray.jpg" alt="">
-          <h3 class="album">No World Order</h3>
-          <h4 class="artista">Gamma Ray</h4>
+          <a href="#Muse">
+            <img class="lancamento-item"  src="img/albuns/muse.jpg" alt="">
+            <h3 class="album">The Resistance</h3>
+            <h4 class="artista">Muse</h4>
+          </a>
         </div>
 
         <div class="item" >
-          <img class="lancamento-item"  src="img/albuns/muse.jpg" alt="">
-          <h3 class="album">The Resistance</h3>
-          <h4 class="artista">Muse</h4>
-        </div>
-        <div class="item" >
-          <img class="lancamento-item"  src="img/albuns/rise-against.jpg" alt="">
-          <h3 class="album">The Black Market</h3>
-          <h4 class="artista">Rise Against</h4>
-        </div>
-        <div class="item" >
-          <img class="lancamento-item"  src="img/albuns/gamma-ray.jpg" alt="">
-          <h3 class="album">No World Order</h3>
-          <h4 class="artista">Gamma Ray</h4>
+          <a href="#RiseAgainst">
+            <img class="lancamento-item"  src="img/albuns/rise-against.jpg" alt="">
+            <h3 class="album">The Black Market</h3>
+            <h4 class="artista">Rise Against</h4>
+          </a>
         </div>
 
         <div class="item" >
-          <img class="lancamento-item"  src="img/albuns/muse.jpg" alt="">
-          <h3 class="album">The Resistance</h3>
-          <h4 class="artista">Muse</h4>
+          <a href="#GammaRay">
+            <img class="lancamento-item"  src="img/albuns/gamma-ray.jpg" alt="">
+            <h3 class="album">No World Order</h3>
+            <h4 class="artista">Gamma Ray</h4>
+          </a>
         </div>
+
         <div class="item" >
-          <img class="lancamento-item"  src="img/albuns/rise-against.jpg" alt="">
-          <h3 class="album">The Black Market</h3>
-          <h4 class="artista">Rise Against</h4>
+          <a href="#Muse">
+            <img class="lancamento-item"  src="img/albuns/muse.jpg" alt="">
+            <h3 class="album">The Resistance</h3>
+            <h4 class="artista">Muse</h4>
+          </a>
         </div>
+
         <div class="item" >
-          <img class="lancamento-item"  src="img/albuns/gamma-ray.jpg" alt="">
-          <h3 class="album">No World Order</h3>
-          <h4 class="artista">Gamma Ray</h4>
+          <a href="#RiseAgainst">
+            <img class="lancamento-item"  src="img/albuns/rise-against.jpg" alt="">
+            <h3 class="album">The Black Market</h3>
+            <h4 class="artista">Rise Against</h4>
+          </a>
         </div>
+
+        <div class="item" >
+          <a href="#GammaRay">
+            <img class="lancamento-item"  src="img/albuns/gamma-ray.jpg" alt="">
+            <h3 class="album">No World Order</h3>
+            <h4 class="artista">Gamma Ray</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#Muse">
+            <img class="lancamento-item"  src="img/albuns/muse.jpg" alt="">
+            <h3 class="album">The Resistance</h3>
+            <h4 class="artista">Muse</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#RiseAgainst">
+            <img class="lancamento-item"  src="img/albuns/rise-against.jpg" alt="">
+            <h3 class="album">The Black Market</h3>
+            <h4 class="artista">Rise Against</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#GammaRay">
+            <img class="lancamento-item"  src="img/albuns/gamma-ray.jpg" alt="">
+            <h3 class="album">No World Order</h3>
+            <h4 class="artista">Gamma Ray</h4>
+          </a>
+        </div>
+
       </div>
 
-      <div class="chamada-lancamentos">
+      <div class="chamada">
         <p>Quer ver mais?</p>
         <a href="#" class="btn btn-roxo">Lançamentos</a>
       </div>
 
   </section>
 
-  <hr class="linha-roxo-escura">
-  <section class="banner-kard"></section>
-  <hr class="linha-roxo-escura">
+  <hr class="linha roxo-escura">
+    <a href="#">
+      <section class="banner kard"></section>
+    </a>
+  <hr class="linha roxo-escura">
 
-  
+  <section class="espaco mais-vendidos">
+    <div class="container">
+      <h1 class="titulo">Mais Vendidos</h1>
 
-  
+      <div class="owl-carousel owl-theme" id="mais-vendidos-2">
+
+        <div class="item" >
+          <a href="#RedVelvet">
+            <img class="lancamento-item"  src="img/albuns/red-velvet.jpg" alt="">
+            <h3 class="album">The Resistance</h3>
+            <h4 class="artista">Muse</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#Twice">
+            <img class="lancamento-item"  src="img/albuns/twice.jpg" alt="">
+            <h3 class="album">The Black Market</h3>
+            <h4 class="artista">Rise Against</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#GammaRay">
+            <img class="lancamento-item"  src="img/albuns/gamma-ray-2.jpg" alt="">
+            <h3 class="album">No World Order</h3>
+            <h4 class="artista">Gamma Ray</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#TaylorSwift">
+            <img class="lancamento-item"  src="img/albuns/taylor-swift.jpg" alt="">
+            <h3 class="album">The Resistance</h3>
+            <h4 class="artista">Muse</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#RiseAgainst">
+            <img class="lancamento-item"  src="img/albuns/rise-against.jpg" alt="">
+            <h3 class="album">The Black Market</h3>
+            <h4 class="artista">Rise Against</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#GammaRay">
+            <img class="lancamento-item"  src="img/albuns/gamma-ray.jpg" alt="">
+            <h3 class="album">No World Order</h3>
+            <h4 class="artista">Gamma Ray</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#Muse">
+            <img class="lancamento-item"  src="img/albuns/muse.jpg" alt="">
+            <h3 class="album">The Resistance</h3>
+            <h4 class="artista">Muse</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#RiseAgainst">
+            <img class="lancamento-item"  src="img/albuns/rise-against.jpg" alt="">
+            <h3 class="album">The Black Market</h3>
+            <h4 class="artista">Rise Against</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#GammaRay">
+            <img class="lancamento-item"  src="img/albuns/gamma-ray.jpg" alt="">
+            <h3 class="album">No World Order</h3>
+            <h4 class="artista">Gamma Ray</h4>
+          </a>
+        </div>
+    </div>
+
+      <div class="owl-carousel owl-theme" id="mais-vendidos">
+        <div class="item" >
+          <a href="#RedVelvet">
+            <img class="lancamento-item"  src="img/albuns/red-velvet.jpg" alt="">
+            <h3 class="album">The Resistance</h3>
+            <h4 class="artista">Muse</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#Twice">
+            <img class="lancamento-item"  src="img/albuns/twice.jpg" alt="">
+            <h3 class="album">The Black Market</h3>
+            <h4 class="artista">Rise Against</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#GammaRay">
+            <img class="lancamento-item"  src="img/albuns/gamma-ray-2.jpg" alt="">
+            <h3 class="album">No World Order</h3>
+            <h4 class="artista">Gamma Ray</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#TaylorSwift">
+            <img class="lancamento-item"  src="img/albuns/taylor-swift.jpg" alt="">
+            <h3 class="album">The Resistance</h3>
+            <h4 class="artista">Muse</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#RiseAgainst">
+            <img class="lancamento-item"  src="img/albuns/rise-against.jpg" alt="">
+            <h3 class="album">The Black Market</h3>
+            <h4 class="artista">Rise Against</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#GammaRay">
+            <img class="lancamento-item"  src="img/albuns/gamma-ray.jpg" alt="">
+            <h3 class="album">No World Order</h3>
+            <h4 class="artista">Gamma Ray</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#Muse">
+            <img class="lancamento-item"  src="img/albuns/muse.jpg" alt="">
+            <h3 class="album">The Resistance</h3>
+            <h4 class="artista">Muse</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#RiseAgainst">
+            <img class="lancamento-item"  src="img/albuns/rise-against.jpg" alt="">
+            <h3 class="album">The Black Market</h3>
+            <h4 class="artista">Rise Against</h4>
+          </a>
+        </div>
+        
+        <div class="item" >
+          <a href="#GammaRay">
+            <img class="lancamento-item"  src="img/albuns/gamma-ray.jpg" alt="">
+            <h3 class="album">No World Order</h3>
+            <h4 class="artista">Gamma Ray</h4>
+          </a>
+        </div>
+    </div>
+
+    <div class="chamada">
+      <p>Não achou o que estava procurando?</p>
+      <a href="#" class="btn btn-roxo-escuro">Mais Vendidos</a>
+    </div>
+
+  </section>
+
+  <hr class="linha preta">
+    <a href="#">
+      <section class="banner hugh-laurie"></section>
+    </a>
+  <hr class="linha preta">
+
+  <section class="espaco">
+    <div class="container">
+      <h1 class="subtitulo">Nacionais</h1>
+
+      <div class="owl-carousel owl-theme" id="nacionais">
+
+        <div class="item" >
+          <a href="#RedVelvet">
+            <img class="lancamento-item"  src="img/albuns/red-velvet.jpg" alt="">
+            <h3 class="albuns">The Resistance</h3>
+            <h4 class="artistas">Muse</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#Twice">
+            <img class="lancamento-item"  src="img/albuns/twice.jpg" alt="">
+            <h3 class="albuns">The Black Market</h3>
+            <h4 class="artistas">Rise Against</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#GammaRay">
+            <img class="lancamento-item"  src="img/albuns/gamma-ray-2.jpg" alt="">
+            <h3 class="albuns">No World Order</h3>
+            <h4 class="artistas">Gamma Ray</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#TaylorSwift">
+            <img class="lancamento-item"  src="img/albuns/taylor-swift.jpg" alt="">
+            <h3 class="albuns">The Resistance</h3>
+            <h4 class="artistas">Muse</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#RiseAgainst">
+            <img class="lancamento-item"  src="img/albuns/rise-against.jpg" alt="">
+            <h3 class="albuns">The Black Market</h3>
+            <h4 class="artistas">Rise Against</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#GammaRay">
+            <img class="lancamento-item"  src="img/albuns/gamma-ray.jpg" alt="">
+            <h3 class="albuns">No World Order</h3>
+            <h4 class="artistas">Gamma Ray</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#Muse">
+            <img class="lancamento-item"  src="img/albuns/muse.jpg" alt="">
+            <h3 class="albuns">The Resistance</h3>
+            <h4 class="artistas">Muse</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#RiseAgainst">
+            <img class="lancamento-item"  src="img/albuns/rise-against.jpg" alt="">
+            <h3 class="albuns">The Black Market</h3>
+            <h4 class="artistas">Rise Against</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#GammaRay">
+            <img class="lancamento-item"  src="img/albuns/gamma-ray.jpg" alt="">
+            <h3 class="albuns">No World Order</h3>
+            <h4 class="artistas">Gamma Ray</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="espaco">
+    <div class="container">
+      <h1 class="subtitulo">Clássicos</h1>
+
+      <div class="owl-carousel owl-theme" id="classicos">
+
+        <div class="item" >
+          <a href="#RedVelvet">
+            <img class="lancamento-item"  src="img/albuns/red-velvet.jpg" alt="">
+            <h3 class="albuns">The Resistance</h3>
+            <h4 class="artistas">Muse</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#Twice">
+            <img class="lancamento-item"  src="img/albuns/twice.jpg" alt="">
+            <h3 class="albuns">The Black Market</h3>
+            <h4 class="artistas">Rise Against</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#GammaRay">
+            <img class="lancamento-item"  src="img/albuns/gamma-ray-2.jpg" alt="">
+            <h3 class="albuns">No World Order</h3>
+            <h4 class="artistas">Gamma Ray</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#TaylorSwift">
+            <img class="lancamento-item"  src="img/albuns/taylor-swift.jpg" alt="">
+            <h3 class="albuns">The Resistance</h3>
+            <h4 class="artistas">Muse</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#RiseAgainst">
+            <img class="lancamento-item"  src="img/albuns/rise-against.jpg" alt="">
+            <h3 class="albuns">The Black Market</h3>
+            <h4 class="artistas">Rise Against</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#GammaRay">
+            <img class="lancamento-item"  src="img/albuns/gamma-ray.jpg" alt="">
+            <h3 class="albuns">No World Order</h3>
+            <h4 class="artistas">Gamma Ray</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#Muse">
+            <img class="lancamento-item"  src="img/albuns/muse.jpg" alt="">
+            <h3 class="albuns">The Resistance</h3>
+            <h4 class="artistas">Muse</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#RiseAgainst">
+            <img class="lancamento-item"  src="img/albuns/rise-against.jpg" alt="">
+            <h3 class="albuns">The Black Market</h3>
+            <h4 class="artistas">Rise Against</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#GammaRay">
+            <img class="lancamento-item"  src="img/albuns/gamma-ray.jpg" alt="">
+            <h3 class="albuns">No World Order</h3>
+            <h4 class="artistas">Gamma Ray</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <section class="espaco">
+    <div class="container">
+      <h1 class="subtitulo">Pop/rock</h1>
+
+      <div class="owl-carousel owl-theme" id="pop-rock">
+
+        <div class="item" >
+          <a href="#RedVelvet">
+            <img class="lancamento-item"  src="img/albuns/red-velvet.jpg" alt="">
+            <h3 class="albuns">The Resistance</h3>
+            <h4 class="artistas">Muse</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#Twice">
+            <img class="lancamento-item"  src="img/albuns/twice.jpg" alt="">
+            <h3 class="albuns">The Black Market</h3>
+            <h4 class="artistas">Rise Against</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#GammaRay">
+            <img class="lancamento-item"  src="img/albuns/gamma-ray-2.jpg" alt="">
+            <h3 class="albuns">No World Order</h3>
+            <h4 class="artistas">Gamma Ray</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#TaylorSwift">
+            <img class="lancamento-item"  src="img/albuns/taylor-swift.jpg" alt="">
+            <h3 class="albuns">The Resistance</h3>
+            <h4 class="artistas">Muse</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#RiseAgainst">
+            <img class="lancamento-item"  src="img/albuns/rise-against.jpg" alt="">
+            <h3 class="albuns">The Black Market</h3>
+            <h4 class="artistas">Rise Against</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#GammaRay">
+            <img class="lancamento-item"  src="img/albuns/gamma-ray.jpg" alt="">
+            <h3 class="albuns">No World Order</h3>
+            <h4 class="artistas">Gamma Ray</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#Muse">
+            <img class="lancamento-item"  src="img/albuns/muse.jpg" alt="">
+            <h3 class="albuns">The Resistance</h3>
+            <h4 class="artistas">Muse</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#RiseAgainst">
+            <img class="lancamento-item"  src="img/albuns/rise-against.jpg" alt="">
+            <h3 class="albuns">The Black Market</h3>
+            <h4 class="artistas">Rise Against</h4>
+          </a>
+        </div>
+
+        <div class="item" >
+          <a href="#GammaRay">
+            <img class="lancamento-item"  src="img/albuns/gamma-ray.jpg" alt="">
+            <h3 class="albuns">No World Order</h3>
+            <h4 class="artistas">Gamma Ray</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="linha preta">
+    <section class="banner banner-final">
+      <h1 class="titulo">Sua música com você<br>Em qualquer hora<br>Em qualquer lugar</h1>
+    </section>
+  <hr class="linha preta">
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="grid-5">
+        <h2 class="subtitulo menor">Sobre a Empresa</h2>
+        <p>A empresa MusicShop surgiu numa manhã de segunda, pela vontade de sua desenvolvedora de conseguir um estágio na Gocase e aprender mais sobre o desenvolvimento web.</p>
+      </div>
+
+      <div class="grid-4">
+        <h2 class="subtitulo menor">Contato</h2>
+        <p>- Rua da Música, 1898 - Bairro Musical</p>
+        <p>- (85) 9999-9999</p>
+        <p>- contato@musicshop.com</p>
+      </div>
+
+      <div class="grid-3">
+        <h2 class="subtitulo menor">Redes Sociais</h2>
+
+        <div class="redes">
+          <a href="#">
+            <img src="img/redes-sociais/facebook.png" alt="Facebook MusicShop">
+          </a>
+        </div>
+
+        <div class="redes">
+          <a href="#">
+            <img src="img/redes-sociais/instagram.png" alt="Instagram MusicShop">
+          </a>
+        </div>
+
+        <div class="redes">
+          <a href="#">
+            <img src="img/redes-sociais/twitter.png" alt="Twitter MusicShop">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <section class="sub-footer">
+    <p>Bianca Rocha 2017 - Todos os direitos reservados</p>
+  </section>
+
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/app.js"></script>

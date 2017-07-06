@@ -231,6 +231,7 @@ table {
 .logo {
   display: inline-block;
   float: left;
+  margin-top: 5px;
 }
 
 .logo img {

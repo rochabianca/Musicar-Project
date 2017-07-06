@@ -69,7 +69,6 @@ img {
     margin-bottom: 15px;
   }
 }
-
 //Linhas Divisórias
 
 hr.linha {
@@ -228,6 +227,14 @@ hr.linha {
   p {
     @include tipo-2(14);
     color: $branco;
+  }
+  div div {
+    @include d(s) {
+      margin-bottom: 20px;
+    }
+  }
+  @include d(s) {
+    padding-bottom: 0px;
   }
 }
 

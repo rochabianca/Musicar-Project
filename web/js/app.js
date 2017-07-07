@@ -1,6 +1,4 @@
-
 //Origamid Menu
-
 (function( $, window ) {
 $.fn.origamidMenu = function( options ) {
 	
@@ -57,104 +55,100 @@ $.fn.origamidMenu = function( options ) {
 	}
 	
 	menuFunction();
-	$(window).resize(menuFunction);
-};
+	    $(window).resize(menuFunction);
+    };
+
+    $('.menu-mobile ul').origamidMenu({
+        breakpoint: 960,
+        top: 80,
+        background: "#864dd9",
+        color: "white"
+    });
+
 }( jQuery, window ));
-
-/*Slider*/
-
-(function() {
-    function slider (sliderName, velocidade) {
-        var sliderClass = '.' + sliderName,
-            activeClass = 'active',
-            rotate = setInterval(rotateSlide, velocidade);
-
-        $(sliderClass+ '> :first').addClass(activeClass);
-
-        $(sliderClass).hover(function() {
-            clearInterval(rotate);
-        }, function() {
-            rotate = setInterval(rotateSlide, velocidade);
-        });
-
-        function rotateSlide() {
-            var activeSlide = $(sliderClass+ '> .' + activeClass),
-                nextSlide = activeSlide.next();
-            
-            if(nextSlide.length == 0) {
-                nextSlide = $(sliderClass+ '> :first');
-            }
-            activeSlide.removeClass(activeClass);
-            nextSlide.addClass(activeClass);
-        }
-    }
-
-    slider('introducao', 3000);
-})();
 
 //Owl Carousel
 
-$('#lancamentos').owlCarousel({
-    loop:true,
-    margin:60,
-    dots: true,
-    responsive:{
-        0:{
-            items:2,
-            margin: 15
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:3
+(function() {
+
+    $('#intro').owlCarousel({
+        loop:true,
+        margin:0,
+        dots: true,
+        autoplay: true,
+        responsive:{
+            0:{
+                items:1,
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:1
+            }
         }
-    }
-});
+    });
 
-$('#mais-vendidos, #mais-vendidos-2').owlCarousel({
-    loop:true,
-    margin: 15,
-    dots: true,
-    responsive:{
-        0:{
-            items:3
-        },
-        600:{
-            items:4
-        },
-        1000:{
-            items:4
+    $('#lancamentos').owlCarousel({
+        loop:true,
+        margin:60,
+        dots: true,
+        responsive:{
+            0:{
+                items:2,
+                margin: 15
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:3
+            }
         }
-    }
-});
+    });
 
-$('#nacionais, #classicos, #pop-rock').owlCarousel({
-    loop:true,
-    margin: 15,
-    dots: true,
-    responsive:{
-        0:{
-            items:3
-        },
-        600:{
-            items:4
-        },
-        1000:{
-            items:5
+    $('#mais-vendidos, #mais-vendidos-2').owlCarousel({
+        loop:true,
+        margin: 15,
+        dots: true,
+        responsive:{
+            0:{
+                items:3
+            },
+            600:{
+                items:4
+            },
+            1000:{
+                items:4
+            }
         }
-    }
-});
+    });
+
+    $('#nacionais, #classicos, #pop-rock').owlCarousel({
+        loop:true,
+        margin: 15,
+        dots: true,
+        responsive:{
+            0:{
+                items:3
+            },
+            600:{
+                items:4
+            },
+            1000:{
+                items:5
+            }
+        }
+    });
 
 
 
-$(document).ready(function(){
-  $(".owl-carousel").owlCarousel();
-});
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel();
+    });
 
-$('.menu-mobile ul').origamidMenu({
-	breakpoint: 960,
-	top: 80,
-	background: "#864dd9",
-	color: "white"
-});
+})();
+
+$('#demo-2 input[type=search]').on('click touchstart'), function() {
+    console.log(clicou);
+}

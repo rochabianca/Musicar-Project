@@ -93,6 +93,9 @@ hr.linha {
 
 .introducao {
 	background: $preto;
+  @include d(s) {
+    display: none !important;
+  }
 }
 
 .introducao img {
@@ -101,21 +104,14 @@ hr.linha {
 	width: 100%;
 }
 
-.slide {
-	position: relative;
-	overflow: hidden;
-}
-
-.slide > * {
-	width: 100%;
-	position: absolute;
-	opacity: 0;
-	transition: .5s;
-}
-
-.slide > .active {
-	position: relative;
-	opacity: 1;
+.intro-mobile {
+  display: none;
+  background: #ddd8d4 url('../img/introducao-mobile.jpg') no-repeat center;
+  width: 100%;
+  height: 380px;
+  @include d(s) {
+    display: block;
+  }
 }
 
 .lancamento-item {
@@ -156,8 +152,29 @@ hr.linha {
   text-transform: none;
 }
 
+.espaco-mv {
+  margin-bottom: 30px;
+}
+
+.introducao.owl-theme .owl-nav.disabled+.owl-dots {
+  margin-top: -21px ;
+  position: relative;
+}
+
+.introducao.owl-theme .owl-dots, .owl-theme .owl-nav {
+  text-align: left;
+}
+
 .owl-theme .owl-dots, .owl-theme .owl-nav {
   text-align: right;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: $roxo;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  background: #78797A ;
 }
 
 //Botões
@@ -195,20 +212,30 @@ hr.linha {
 .banner {
   width: 100%;
   height: 450px;
+  @include d(s) {
+    height: 380px;
+  }
 }
 
 .kard {
-  background: url("../img/banner-kard.jpg") no-repeat;
+  background: url("../img/banner-kard.jpg") no-repeat center;
   background-size: cover;
+  @include d(s) {
+     background: url("../img/kard-mobile.jpg") no-repeat center;
+  }
 }
 
 .hugh-laurie {
-  background: url("../img/hugh-laurie.jpg") no-repeat;
+  background: url("../img/hugh-laurie.jpg") no-repeat center;
   background-size: cover;
+
+  @include d(s) {
+    background: $preto url("../img/hugh-laurie-mobile.jpg") no-repeat center;
+  }
 }
 
 .banner-final {
-  background: url("../img/banner-final.jpg") no-repeat;
+  background: url("../img/banner-final.jpg") no-repeat center;
   background-size: cover;
   height: 300px;
   
@@ -250,6 +277,9 @@ hr.linha {
 .sub-footer {
   background: $roxo;
   padding: 20px;
-  color: $roxo-escuro;
+  color: $branco;
   text-align: center;
+  @include d(s) {
+    color: $branco;
+  }
 }

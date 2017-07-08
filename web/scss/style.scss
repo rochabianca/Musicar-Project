@@ -69,6 +69,7 @@ img {
     margin-bottom: 15px;
   }
 }
+
 //Linhas Divisórias
 
 hr.linha {
@@ -298,13 +299,18 @@ hr.linha {
   padding: 20px;
   color: $branco;
   text-align: left;
+  p {
+    margin-left: 10px;
+    @include d(s) {
+      margin-left: 0px;
+    }
+  }
   @include d(s) {
     font-size: em(14, 16);
     color: $branco;
+    padding: 0px 20px 20px 0px;
   }
-  p {
-    margin-left: 10px;
-  }
+
 }
 
 //Modais
@@ -404,6 +410,7 @@ hr.linha {
 
 .flex-menu {
   justify-content: flex-end;
+  margin-bottom: 10px;
 }
 
 .info-album {

@@ -60,7 +60,7 @@ $.fn.origamidMenu = function( options ) {
 
     $('.menu-mobile ul').origamidMenu({
         breakpoint: 960,
-        top: 80,
+        top: 60,
         background: "#864dd9",
         color: "white"
     });

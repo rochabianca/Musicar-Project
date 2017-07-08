@@ -3,9 +3,6 @@
   padding: 10px;
 }
 
-.header-container {
-  margin-top: 10px;
-}
 
 .logo {
   display: inline-block;
@@ -23,8 +20,7 @@
 
 
 .menu ul li{
-  display: inline-block;
-  margin-top: 10px;
+  display: inline-flex;
  }
 
 .menu ul li a {
@@ -51,8 +47,19 @@
 
 //Search
 
+.buscar-mobile {
+	display: none !important;
+	@include d(s) {
+		display: block !important;
+	}
+}
+
 .busca {
 	float: left;
+	padding-top: 10px;
+	@include d(s) {
+		display: none !important;
+	}
 }
 
 input {
@@ -120,7 +127,7 @@ input::-webkit-input-placeholder {
 	width: 130px;
 	padding-left: 32px;
 	color: #000;
-	// background-color: #fff;
+	background-color: #fff;
 	cursor: auto;
 }
 #demo-2 input:-moz-placeholder {
@@ -133,7 +140,6 @@ input::-webkit-input-placeholder {
 
 //Menu mobile
 
-/* Menu Styles */
 #origamid-menu {
 	visibility: hidden;
 	position: absolute;
@@ -182,7 +188,8 @@ input::-webkit-input-placeholder {
 	color: black;
 }
 
-/* Menu Icon */
+/* Ícone do Menu no mobile */
+
 #origamid-icon {
 	display: block;
 	float: right;

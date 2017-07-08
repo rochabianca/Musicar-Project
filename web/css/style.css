@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -224,10 +225,6 @@ table {
   padding: 10px;
 }
 
-.header-container {
-  margin-top: 10px;
-}
-
 .logo {
   display: inline-block;
   float: left;
@@ -244,8 +241,7 @@ table {
 }
 
 .menu ul li {
-  display: inline-block;
-  margin-top: 10px;
+  display: inline-flex;
 }
 
 .menu ul li a {
@@ -272,8 +268,25 @@ table {
   width: 100%;
 }
 
+.buscar-mobile {
+  display: none !important;
+}
+
+@media screen and (max-width: 759px) {
+  .buscar-mobile {
+    display: block !important;
+  }
+}
+
 .busca {
   float: left;
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 759px) {
+  .busca {
+    display: none !important;
+  }
 }
 
 input {
@@ -344,6 +357,7 @@ input::-webkit-input-placeholder {
   width: 130px;
   padding-left: 32px;
   color: #000;
+  background-color: #fff;
   cursor: auto;
 }
 
@@ -355,7 +369,6 @@ input::-webkit-input-placeholder {
   color: transparent;
 }
 
-/* Menu Styles */
 #origamid-menu {
   visibility: hidden;
   position: absolute;
@@ -404,7 +417,7 @@ input::-webkit-input-placeholder {
   color: black;
 }
 
-/* Menu Icon */
+/* Ícone do Menu no mobile */
 #origamid-icon {
   display: block;
   float: right;
@@ -801,15 +814,22 @@ hr.linha {
   text-align: left;
 }
 
+.sub-footer p {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 759px) {
+  .sub-footer p {
+    margin-left: 0px;
+  }
+}
+
 @media screen and (max-width: 759px) {
   .sub-footer {
     font-size: 0.875em;
     color: #fff;
+    padding: 0px 20px 20px 0px;
   }
-}
-
-.sub-footer p {
-  margin-left: 10px;
 }
 
 .modal {
@@ -920,6 +940,7 @@ hr.linha {
 
 .flex-menu {
   justify-content: flex-end;
+  margin-bottom: 10px;
 }
 
 .info-album {

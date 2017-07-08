@@ -794,18 +794,22 @@ hr.linha {
 
 .sub-footer {
   font-family: "Lato", sans-serif;
-  font-size: 0.625em;
-  background: #864dd9;
+  font-size: 0.875em;
+  background: #252742;
   padding: 20px;
   color: #fff;
-  text-align: center;
+  text-align: left;
 }
 
 @media screen and (max-width: 759px) {
   .sub-footer {
-    font-size: 0.625em;
+    font-size: 0.875em;
     color: #fff;
   }
+}
+
+.sub-footer p {
+  margin-left: 10px;
 }
 
 .modal {

@@ -293,14 +293,17 @@ hr.linha {
 
 .sub-footer {
   font-family: $fonte;
-  font-size: em(10, 16);
-  background: $roxo;
+  font-size: em(14, 16);
+  background: $roxo-escuro;
   padding: 20px;
   color: $branco;
-  text-align: center;
+  text-align: left;
   @include d(s) {
-    font-size: em(10, 16);
+    font-size: em(14, 16);
     color: $branco;
+  }
+  p {
+    margin-left: 10px;
   }
 }
 

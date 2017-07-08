@@ -645,6 +645,12 @@ hr.linha {
   text-align: right;
 }
 
+@media screen and (max-width: 759px) {
+  .owl-theme .owl-dots, .owl-theme .owl-nav {
+    text-align: center;
+  }
+}
+
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
   background: #864dd9;
 }

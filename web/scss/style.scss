@@ -167,6 +167,9 @@ hr.linha {
 
 .owl-theme .owl-dots, .owl-theme .owl-nav {
   text-align: right;
+  @include d(s) {
+    text-align: center;
+  }
 }
 
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {

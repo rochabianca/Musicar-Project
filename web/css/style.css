@@ -546,7 +546,7 @@ hr.linha {
 }
 
 .introducao {
-  background: #000;
+  background: #252742;
 }
 
 @media screen and (max-width: 759px) {
@@ -685,6 +685,29 @@ hr.linha {
   background: #864DD9;
 }
 
+.btn-carrinho {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.875em;
+  line-height: 1.42857em;
+  padding: 10px;
+  height: 40px;
+  background: #7127ac;
+  margin: 0px;
+  cursor: pointer;
+}
+
+.btn-carrinho:hover {
+  background: #252742;
+}
+
+@media screen and (max-width: 759px) {
+  .btn-carrinho {
+    height: 55px;
+  }
+}
+
 .banner {
   width: 100%;
   height: 450px;
@@ -756,7 +779,6 @@ hr.linha {
 
 .redes {
   display: inline-block;
-  border: 3px solid #fff;
   margin-left: 5px;
 }
 
@@ -765,6 +787,8 @@ hr.linha {
 }
 
 .sub-footer {
+  font-family: "Lato", sans-serif;
+  font-size: 0.625em;
   background: #864dd9;
   padding: 20px;
   color: #fff;
@@ -773,6 +797,154 @@ hr.linha {
 
 @media screen and (max-width: 759px) {
   .sub-footer {
+    font-size: 0.625em;
     color: #fff;
   }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal > div {
+  max-height: calc(100vh - 35px);
+  overflow-y: auto;
+  width: 70%;
+  position: relative;
+  margin: 30px auto;
+  padding: 5px 20px 13px 20px;
+  border-radius: 5px;
+  background: #fff;
+  background: -moz-linear-gradient(#fff, #eeeeee);
+  background: -webkit-linear-gradient(#fff, #eeeeee);
+  background: -o-linear-gradient(#fff, #eeeeee);
+}
+
+@media screen and (max-width: 759px) {
+  .modal > div {
+    width: 90%;
+  }
+}
+
+.fechar {
+  font-family: "Lato", sans-serif;
+  font-size: 1.5em;
+  color: #78797A;
+  position: absolute;
+  right: 10px;
+  text-align: center;
+  top: 5px;
+  width: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.fechar:hover {
+  color: #7127ac;
+}
+
+.lista-musicas {
+  display: flex;
+  justify-content: center;
+}
+
+.lista-musicas ul {
+  display: inline-block;
+}
+
+.lista-musicas ul::nth-child(1) {
+  color: blue !important;
+}
+
+.lista-musicas ul li {
+  width: 100%;
+  padding: 10px;
+  border-bottom: 2px solid #cbcbcd;
+  font-family: "Lato", sans-serif;
+  font-size: 0.875em;
+  line-height: 1.42857em;
+  color: #252742;
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .lista-musicas ul li {
+    width: 400px;
+  }
+}
+
+.lista-musicas ul li:last-child {
+  border: none;
+}
+
+.titulo-album {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.875em;
+  line-height: 1.42857em;
+  color: #7127ac;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.flex-menu {
+  justify-content: flex-end;
+}
+
+.info-album {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 759px) {
+  .info-album {
+    justify-content: center;
+  }
+}
+
+.preco {
+  margin-left: 10px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  color: #252742;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .preco {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .preco {
+    margin-bottom: 20px;
+  }
+}
+
+.preco sup {
+  margin-right: 5px;
 }

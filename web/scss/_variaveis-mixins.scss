@@ -4,6 +4,7 @@ $roxo-medio: #7127ac;
 $roxo-escuro: #252742;
 
 $branco: #fff;
+$cinza: #78797A;
 $preto: #000;
 
 
@@ -20,6 +21,10 @@ $fonte: 'Lato', sans-serif;
   font-family: $fonte;
   font-weight: bold;
   text-transform: uppercase;
+  @if $size == 14 {
+    font-size: em(14);
+    line-height: em(20, 14);
+  }
   @if $size == 18 {
     font-size: em(18);
     line-height: em(30, 18);

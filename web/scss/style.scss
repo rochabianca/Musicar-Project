@@ -92,7 +92,7 @@ hr.linha {
 //Introdução
 
 .introducao {
-	background: $preto;
+	background: $roxo-escuro;
   @include d(s) {
     display: none !important;
   }
@@ -174,7 +174,7 @@ hr.linha {
 }
 
 .owl-theme .owl-dots .owl-dot span {
-  background: #78797A ;
+  background: $cinza;
 }
 
 //Botões
@@ -204,6 +204,21 @@ hr.linha {
   background: $roxo-escuro;
   &:hover {
     background: #864DD9;
+  }
+}
+
+.btn-carrinho {
+  @include tipo-1(14);
+  padding: 10px;
+  height: 40px;
+  background: $roxo-medio;
+  margin: 0px;
+  cursor: pointer;
+  &:hover {
+    background: $roxo-escuro;
+  }
+  @include d(s) {
+    height: 55px;
   }
 }
 
@@ -267,7 +282,6 @@ hr.linha {
 
 .redes {
   display: inline-block;
-  border: 3px solid $branco;
   margin-left: 5px;
   img {
     padding: 5px;
@@ -275,11 +289,136 @@ hr.linha {
 }
 
 .sub-footer {
+  font-family: $fonte;
+  font-size: em(10, 16);
   background: $roxo;
   padding: 20px;
   color: $branco;
   text-align: center;
   @include d(s) {
+    font-size: em(10, 16);
     color: $branco;
+  }
+}
+
+//Modais
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modal:target {
+  opacity:1;
+  pointer-events: auto;
+}
+
+.modal > div {
+  max-height: calc(100vh - 35px);
+  overflow-y: auto;
+  width:70%;
+  position: relative;
+  margin: 30px auto;
+  padding: 5px 20px 13px 20px;
+  border-radius: 5px;
+  background: #fff;
+  background: -moz-linear-gradient(#fff, #eeeeee);
+  background: -webkit-linear-gradient(#fff, #eeeeee);
+  background: -o-linear-gradient(#fff, #eeeeee);
+  @include d(s) {
+    width: 90%;
+  }
+}
+
+.fechar {
+  font-family: $fonte;
+  font-size: em(24, 16);
+  color: $cinza;
+  position: absolute;
+  right: 10px;
+  text-align: center;
+  top: 5px;
+  width: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.fechar:hover { 
+  color: $roxo-medio;
+}
+
+.lista-musicas {
+  display: flex;
+  justify-content: center;
+}
+
+.lista-musicas ul {
+  display: inline-block;
+  &::nth-child(1) {
+    color: blue !important;
+  }
+}
+
+.lista-musicas ul li {
+  @include d(l) {
+    width: 400px;
+  }
+  width: 100%;
+  padding: 10px;
+  border-bottom: 2px solid #cbcbcd;
+  @include tipo-2(14);
+  color: $roxo-escuro;
+  margin-right: 10px;
+
+  &:last-child {
+    border: none;
+  }
+}
+
+.titulo-album {
+  @include tipo-1(14);
+  color: $roxo-medio;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.flex-menu {
+  justify-content: flex-end;
+}
+
+.info-album {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  @include d(s) {
+    justify-content: center;
+  }
+}
+
+.preco {
+  margin-left: 10px;
+  @include tipo-1(24);
+  color: $roxo-escuro;
+  @include d(m) {
+    margin-bottom: 20px;
+  }
+  @include d(s) {
+    margin-bottom: 20px;
+  }
+  sup {
+    margin-right: 5px;
   }
 }

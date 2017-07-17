@@ -563,27 +563,23 @@ hr.linha {
 }
 
 @media screen and (max-width: 759px) {
-  .introducao {
-    display: none !important;
+  .item-desktop {
+    display: none;
+    overflow: hidden;
   }
 }
 
-.introducao img {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
+@media screen and (min-width: 1200px) {
+  .item-mobile {
+    display: none;
+    overflow: hidden;
+  }
 }
 
-.intro-mobile {
-  display: none;
-  background: #ddd8d4 url("../img/introducao-mobile.jpg") no-repeat center;
-  width: 100%;
-  height: 380px;
-}
-
-@media screen and (max-width: 759px) {
-  .intro-mobile {
-    display: block;
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .item-mobile {
+    display: none;
+    overflow: hidden;
   }
 }
 
@@ -651,7 +647,13 @@ hr.linha {
 }
 
 .introducao.owl-theme .owl-dots, .owl-theme .owl-nav {
-  text-align: left;
+  text-align: right;
+}
+
+@media screen and (max-width: 759px) {
+  .introducao.owl-theme .owl-dots, .owl-theme .owl-nav {
+    text-align: right;
+  }
 }
 
 .owl-theme .owl-dots, .owl-theme .owl-nav {
@@ -734,7 +736,7 @@ hr.linha {
 
 @media screen and (max-width: 759px) {
   .banner {
-    height: 380px;
+    height: 300px;
   }
 }
 
@@ -766,9 +768,11 @@ hr.linha {
   height: 250px;
 }
 
-.banner-final h1 {
-  padding-top: 30px;
-  text-transform: none;
+@media screen and (max-width: 759px) {
+  .banner-final {
+    background: url("../img/final-mobile.jpg") no-repeat center;
+    height: 300px;
+  }
 }
 
 .footer {
